@@ -1,12 +1,19 @@
 import { defineConfig } from 'vite'
 import { viteStaticCopy } from 'vite-plugin-static-copy'
+import { glob } from 'glob'
+import { relative } from 'path'
+import { fileURLToPath } from 'url'
 
 export default defineConfig({
+    //base: '/templating-jsx-demo/', // Nutno upravit podle názvu repozitáře
     root: "./src/pages",
     publicDir: "../../public",
     build: {
+        outDir: '../../dist',
+        emptyOutDir: true,
+        target: 'es2022',
         rollupOptions: {
-            input: ["./index.html"], //TODO všechny soubory *.html
+            input: glob.sync('src/pages/**/.html')
         },
     },
     esbuild: {

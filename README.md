@@ -12,7 +12,7 @@ npm run dev
 ```
 
 
-## Produkční build
+## Produkční build (zatím nefunguje…)
 ```sh
 npm run build
 ```
