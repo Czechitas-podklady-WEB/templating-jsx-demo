@@ -39,13 +39,15 @@
         </thead>
         <tbody></tbody>
       </table>
+
     </div>
     <script type="module">
-      import { UcastniciTabulka } from "../../components/ucastnici.jsx";
+      import { UcastniciTabulka, Formular } from "../../components/ucastnici.jsx";
       const vykresli = async () => {
         const resp = await fetch("/data/ucastnici.json");
         const ucastnici = await resp.json();
         document.querySelector(".table > tbody").appendChild(UcastniciTabulka({ ucastnici }));
+        document.querySelector(".container").appendChild(Formular());
       };
       vykresli();
     </script>
