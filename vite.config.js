@@ -13,7 +13,7 @@ export default defineConfig({
         emptyOutDir: true,
         target: 'es2022',
         rollupOptions: {
-            input: glob.sync('src/pages/**/.html')
+            input: glob.sync('src/pages/**/*.html')
         },
     },
     esbuild: {
