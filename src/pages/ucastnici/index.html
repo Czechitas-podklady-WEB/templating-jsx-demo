@@ -1,53 +1,17 @@
 <!DOCTYPE html>
 <html lang="cs">
-  <head>
-    <meta charset="UTF-8" />
+<head>
+    <meta charset="UTF-8"/>
     <title>Pohádková škola JavaScriptu</title>
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
-      crossorigin="anonymous"
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+        crossorigin="anonymous"
     />
-  </head>
-  <body>
-    <div class="container">
-      <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
-        <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
-          <img height="32" src="/images/logo.svg" alt="logo Zvířátkovské školy Javy" />
-          <span class="fs-4">Pohádková škola Javy</span>
-        </a>
-
-        <ul class="nav nav-pills">
-          <li class="nav-item"><a href="/" class="nav-link">Domů</a></li>
-          <li class="nav-item"><a href="/ucastnici/" class="nav-link">Účastníci</a></li>
-          <li class="nav-item"><a href="/lektori/" class="nav-link">Lektoři</a></li>
-          <li class="nav-item"><a href="/lekce/" class="nav-link">Lekce</a></li>
-        </ul>
-      </header>
-
-      <table class="table table-striped">
-        <thead>
-          <tr>
-            <th scope="col">#</th>
-            <th scope="col"></th>
-            <th scope="col">Jméno</th>
-            <th scope="col">Příjmení</th>
-            <th scope="col">Bydliště</th>
-            <th scope="col"></th>
-          </tr>
-        </thead>
-        <tbody></tbody>
-      </table>
-    </div>
-    <script type="module">
-      import { UcastniciTabulka } from "../../components/ucastnici.jsx";
-      const vykresli = async () => {
-        const resp = await fetch("/data/ucastnici.json");
-        const ucastnici = await resp.json();
-        document.querySelector(".table > tbody").appendChild(UcastniciTabulka({ ucastnici }));
-      };
-      vykresli();
-    </script>
-  </body>
+</head>
+<body>
+<div class="container"></div>
+<script src="index.jsx" type="module"></script>
+</body>
 </html>
