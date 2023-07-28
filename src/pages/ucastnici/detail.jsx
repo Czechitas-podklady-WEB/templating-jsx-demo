@@ -1,7 +1,7 @@
 import {Header} from "../../components/Header.jsx";
 import {apiBaseURL} from "../../lib.js";
 
-export const UcastnikDetail = ({jmeno, prijmeni, bydliste, profilovyObrazek}) => {
+const UcastnikDetail = ({jmeno, prijmeni, bydliste, profilovyObrazek}) => {
     return (
         <div class="card" style="width: 18rem;">
             {profilovyObrazek && <img src={profilovyObrazek} class="card-img-top" alt="profilová fotka"/>}
@@ -10,7 +10,7 @@ export const UcastnikDetail = ({jmeno, prijmeni, bydliste, profilovyObrazek}) =>
                 <p class="card-text">Bydliště: {bydliste || <em>neuvedeno</em>}</p>
             </div>
         </div>
-    );
+        );
 }
 
 const id = new URLSearchParams(window.location.search).get("id");
@@ -21,12 +21,12 @@ const Page = () => {
 
     return (
         <>
-            <Header/>
+        <Header/>
 
-            <UcastnikDetail jmeno={jmeno} prijmeni={prijmeni} bydliste={bydliste}
-                            profilovyObrazek={profilovyObrazek}/>
+        <UcastnikDetail jmeno={jmeno} prijmeni={prijmeni} bydliste={bydliste}
+            profilovyObrazek={profilovyObrazek}/>
         </>
-    )
+        )
 }
 
 document.querySelector(".container").appendChild(<Page/>)

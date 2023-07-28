@@ -1,7 +1,7 @@
 import {Header} from "../../components/Header.jsx";
 import {apiBaseURL} from "../../lib.js";
 
-export const LektorDetail = ({jmeno, prijmeni, role, profilovyObrazek}) => {
+const LektorDetail = ({jmeno, prijmeni, role, profilovyObrazek}) => {
     return (
         <div class="card" style="width: 18rem;">
             {profilovyObrazek && <img src={profilovyObrazek} class="card-img-top" alt="profilová fotka"/>}

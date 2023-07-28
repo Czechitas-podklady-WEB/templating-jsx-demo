@@ -11,9 +11,7 @@ const HomePage = () => {
                 <div class="col-lg-6 mx-auto">
                     <p class="lead mb-4">
                         Jak víte ze seriálu Arabela, i pohádkové postavy musí jít s dobou. Proto jsme se rozhodli
-                        otevřít
-                        školu
-                        programování i pro ně. Učit se budeme, jak jinak, JavaScriptu.
+                        otevřít školu programování i pro ně. Učit se budeme, jak jinak, JavaScriptu.
                     </p>
                 </div>
             </div>
